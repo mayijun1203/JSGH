@@ -1,0 +1,25 @@
+h1.haha{
+    color:maroon;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style:italic;
+    font-weight:bold;
+    font-size: 120%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  #section1,.external-nav-item{
+    color:rgb(247, 0, 255);
+  }
+  body h1{
+    color:rgb(255, 14, 14);
+    font-size: 36px;
+  }
+  body > h1{
+    color:rgb(14, 159, 255);
+  }
+  a:hover{
+    background-color: black;
+  }
+  header a:nth-child(1){
+    background-color: black;
+  }
