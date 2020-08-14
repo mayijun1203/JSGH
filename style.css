@@ -49,3 +49,24 @@ header a:nth-child(1){
   margin: 15px;
   border: 5px solid black;
 }
+
+#header-nav{
+  background-color: blue;
+  border-radius: 0;
+  border: 0;
+}
+
+#logo-img{
+  background: url("https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png") no-repeat;
+  width: 800px;
+  height: 500px;
+}
+
+#navbar-brand > a> h1{
+  color: blue;
+  font-size: 5vw
+}
+
+.container{
+  height: 500px;
+}
