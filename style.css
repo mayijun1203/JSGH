@@ -56,15 +56,21 @@ header a:nth-child(1){
   border: 0;
 }
 
-#logo-img{
+.navbar-header{
   background: url("https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png") no-repeat;
   width: 800px;
-  height: 500px;
+  height: 300px;
+  margin: 0 auto 15px;
 }
 
-#navbar-brand > a> h1{
+.navbar-brand > a> h1{
   color: blue;
   font-size: 5vw
+}
+
+.navbar-brand > a> h1:hover{
+  color: red;
+  opacity: 0.1;
 }
 
 .container{
