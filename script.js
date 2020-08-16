@@ -41,4 +41,11 @@ console.log(c)
 console.log(c.title.second)
 console.log(c['title'])
 
-var d = {}
+var d = {
+    name:'haha',
+    'title title':{
+        first:'a',
+        second:'b'
+    }
+};
+console.log(d)
