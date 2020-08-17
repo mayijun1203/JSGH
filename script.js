@@ -49,3 +49,48 @@ var d = {
     }
 };
 console.log(d)
+
+
+function mm(mt){
+    var mf=function(x){
+        return mt*x;
+    };
+    return mf
+}
+var m3=mm(3);
+console.log(m3(2))
+
+var e=10;
+var f=e;
+f=20;
+console.log(e)
+
+var g={x:10};
+var h=g;
+h.x=20;
+console.log(g)
+
+
+function cc(rd){
+    this.radius=rd;
+}
+cc.prototype.ar=
+    function (){
+        return Math.PI*Math.pow(this.radius,2);
+    };
+var mc=new cc(10);
+console.log(mc);
+console.log(mc.ar());
+
+
+
+var lc={
+    radius:10,
+    ga: function(){
+        return Math.PI*Math.pow(this.radius,2);
+    }
+};
+console.log(lc);
+console.log(lc.ga());
+
+
