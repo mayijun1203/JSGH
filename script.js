@@ -131,3 +131,7 @@ for (var prop in l){
     var m='b'
     console.log(m);
 })();
+
+
+console.log(document.getElementById('logo-img'));
+
