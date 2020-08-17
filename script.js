@@ -120,3 +120,14 @@ console.log(l)
 for (var prop in l){
     console.log(prop+':'+l[prop]);
 };
+
+
+(function (){
+    var m='a'
+    console.log(m);
+})();
+
+(function (){
+    var m='b'
+    console.log(m);
+})();
