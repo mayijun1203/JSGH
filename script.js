@@ -94,13 +94,29 @@ console.log(lc);
 console.log(lc.ga());
 
 
-var i = new Array;
-i[0] = 'a';
-i[1] = 1;
-i[2] = function (x) { return x + 1; };
-i[3] = { d: 'd' };
-console.log(i);
-console.log(i[2](i[1]));
+var j = new Array;
+j[0] = 'a';
+j[1] = 1;
+j[2] = function (x) { return x + 1; };
+j[3] = { d: 'd' };
+console.log(j);
+console.log(j[2](j[1]));
 
 
-var j = []
+var k = ['a',1,function (x) { return x + 1; },{ d: 'd' }];
+k[100]=0
+console.log(k);
+for (var i=0;i<k.length;i++){
+    console.log(k[i]);
+};
+
+
+var l = {
+    a:'a',
+    b:2,
+    c:undefined
+};
+console.log(l)
+for (var prop in l){
+    console.log(prop+':'+l[prop]);
+};
