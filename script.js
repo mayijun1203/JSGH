@@ -103,35 +103,59 @@ console.log(j);
 console.log(j[2](j[1]));
 
 
-var k = ['a',1,function (x) { return x + 1; },{ d: 'd' }];
-k[100]=0
+var k = ['a', 1, function (x) { return x + 1; }, { d: 'd' }];
+k[100] = 0
 console.log(k);
-for (var i=0;i<k.length;i++){
+for (var i = 0; i < k.length; i++) {
     console.log(k[i]);
 };
 
 
 var l = {
-    a:'a',
-    b:2,
-    c:undefined
+    a: 'a',
+    b: 2,
+    c: undefined
 };
 console.log(l)
-for (var prop in l){
-    console.log(prop+':'+l[prop]);
+for (var prop in l) {
+    console.log(prop + ':' + l[prop]);
 };
 
 
-(function (){
-    var m='a'
+(function () {
+    var m = 'a'
     console.log(m);
 })();
 
-(function (){
-    var m='b'
+(function () {
+    var m = 'b'
     console.log(m);
 })();
 
 
 console.log(document.getElementById('logo-img'));
 
+function sh() {
+    this.textContent = 'done';
+    var sn = document.getElementById("shname").value;
+    var msg = "Hey " + sn + "!";
+    var msg2 = "<h2>Hey " + sn + "!</h2>";
+    document.getElementById("shcontent").textContent = msg;
+    document.getElementById("shcontent2").innerHTML = msg2;
+    if (sn === 'haha') {
+        document.querySelector(".title").textContent = "so good";
+    }
+}
+
+
+document.querySelector("#bc").addEventListener("click", sh);
+document.querySelector("#bc2").onclick = sh;
+
+document.querySelector("body")
+    .addEventListener("mousemove",
+        function (event) {
+            if (event.shiftKey === true) {
+                console.log('x: ' + event.clientX);
+                console.log('y: ' + event.clientY);
+            }
+        });
