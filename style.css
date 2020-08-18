@@ -76,3 +76,11 @@ header a:nth-child(1){
 .container{
   height: 500px;
 }
+
+
+
+.dcp-logo {
+  height: 1.5rem;
+  float: left;
+  margin-right: 1rem;
+}
