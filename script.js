@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded",
         document.querySelector("#bc3")
             .addEventListener("click",function(){
                 $ajaxUtils
-                    .sendGetRequest("/data/name.json",
+                    .sendGetRequest("https://github.com/mayijun1203/WEBGH/blob/master/data/name.json",
                         function(res){
                             var msg=res.first+" "+res.last;
                             if (res.like){
