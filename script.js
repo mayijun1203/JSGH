@@ -164,22 +164,22 @@ document.querySelector("body")
 
 
 document.addEventListener("DOMContentLoaded",
-    function(event){
+    function (event) {
         document.querySelector("#bc3")
-            .addEventListener("click",function(){
+            .addEventListener("click", function () {
                 $ajaxUtils
                     .sendGetRequest("/data/name.json",
-                        function(res){
-                            var msg=res.first+" "+res.last;
-                            if (res.like){
-                                msg+=" does like ";
+                        function (res) {
+                            var msg = res.first + " " + res.last;
+                            if (res.like) {
+                                msg += " does like ";
                             }
                             else {
-                                msg+=" desn't like ";
+                                msg += " desn't like ";
                             }
-                            msg+="and is ranked "+res.rank;
+                            msg += "and is ranked " + res.rank;
                             document.querySelector("#ct")
-                            .innerHTML="<h2>"+msg+"</h2>";
+                                .innerHTML = "<h2>" + msg + "</h2>";
                         });
 
             });
