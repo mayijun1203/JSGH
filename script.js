@@ -159,3 +159,29 @@ document.querySelector("body")
                 console.log('y: ' + event.clientY);
             }
         });
+
+
+
+
+document.addEventListener("DOMContentLoaded",
+    function(event){
+        document.querySelector("#bc3")
+            .addEventListener("click",function(){
+                $ajaxUtils
+                    .sendGetRequest("/data/name.json",
+                        function(res){
+                            var msg=res.first+" "+res.last;
+                            if (res.like){
+                                msg+=" does like ";
+                            }
+                            else {
+                                msg+=" desn't like ";
+                            }
+                            msg+="and is ranked "+res.rank;
+                            document.querySelector("#ct")
+                            .innerHTML="<h2>"+msg+"</h2>";
+                        });
+
+            });
+    }
+);
