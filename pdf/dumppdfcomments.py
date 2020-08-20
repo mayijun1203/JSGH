@@ -5,7 +5,7 @@ import PyQt5
 
 def main():
 
-    doc = popplerqt5.Poppler.Document.load(sys.argv[1])
+    doc = popplerqt5.Poppler.Document.load("/home/mayijun/GITHUB/WEBGH/pdf/test.pdf")
     total_annotations = 0
     for i in range(doc.numPages()):
         #print("========= PAGE {} =========".format(i+1))
