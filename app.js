@@ -172,3 +172,23 @@ function filtera(value){
 };
 
 var filteredsplist1=shoppinglist1.filter(filtera);
+
+
+var parent={
+    value:'a',
+    obj:{
+        objvalue:'b'
+    },
+    walk:function(){
+        console.log('walking');
+    }
+};
+
+var child = Object.create(parent);
+child.obj.objvalue='c'
+console.log(child.value);
+console.log(child.obj.objvalue);
+console.log(child.walk);
+console.log(parent.obj.objvalue);
+
+
