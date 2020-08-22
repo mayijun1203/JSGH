@@ -116,6 +116,17 @@
                 $scope.cnter3++;
             }, 2000);
         };
+
+        $scope.splist1=filteredsplist1;
+        $scope.splist2=shoppinglist2;
+
+        $scope.addtosplist=function(){
+            var newitem={
+                'name':$scope.splist2name,
+                'quant':$scope.splist2quant
+            };
+            $scope.splist2.push(newitem);
+        };
     };
 })();
 
@@ -131,3 +142,33 @@ function rplc() {
         return input;
     };
 };
+
+var shoppinglist1=['a','b','c','d'];
+
+
+var shoppinglist2=[
+    {
+        'name':'e',
+        'quant':2
+    },
+    {
+        'name':'f',
+        'quant':5
+    },    
+    {
+        'name':'g',
+        'quant':1
+    },    
+    {
+        'name':'h',
+        'quant':3
+    }
+];
+
+
+
+function filtera(value){
+    return value!=='a';
+};
+
+var filteredsplist1=shoppinglist1.filter(filtera);

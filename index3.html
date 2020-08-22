@@ -39,6 +39,25 @@
                 <button type='text' ng-click='cnt3()'>counter3</button>
                 <span>{{cnter3}} {{::cnter3}}</span>
             </div>
+            <div>
+                <ol>
+                    <li ng-repeat="item in splist1">{{item}}</li>
+                </ol>
+                <input type="text" ng-model='splist2[0].quant'>
+                <ul>
+                    <li ng-repeat="item in splist2">({{$index+1}}) Buy {{item.quant}} {{item.name}}(s)</li>
+                </ul>
+                <input type="text" ng-model='splist2name' placeholder="Item Name">
+                <input type="text" ng-model='splist2quant' placeholder="Item Name">
+                <button ng-click="addtosplist()">Add Item</button>
+            </div>
+            <hr>
+            <div>
+                <input type="text" ng-model='searchitem'>
+                <ul>
+                    <li ng-repeat="item in splist1 | filter : searchitem">{{item}}</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
