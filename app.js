@@ -1,38 +1,38 @@
-(function () {
-    "use strict";
+// (function () {
+//     "use strict";
 
-    angular.module('ma', [])
-        .controller('mc', function ($scope) {
-            $scope.name = '';
+//     angular.module('ma', [])
+//         .controller('mc', function ($scope) {
+//             $scope.name = '';
 
-            $scope.sh = function () {
-                return "Hello"
-            };
-            
-            $scope.val = 0;
+//             $scope.sh = function () {
+//                 return "Hello"
+//             };
 
-            $scope.msg=function(){
-                return 
-            };
+//             $scope.val = 0;
 
-            $scope.disp = function () {
-                var totvalue = calc($scope.name);
-                $scope.val = totvalue;
-            };
-            function calc(string) {
-                var stringval = 0;
-                for (var i = 0; i < string.length; i++) {
-                    stringval += string.charCodeAt(i);
-                }
-                return stringval;
-            };
+//             $scope.msg=function(){
+//                 return 
+//             };
 
-            $scope.state='hungry';
-            $scope.feed= function(){
-                $scope.state='full';
-            };
-        });
-})();
+//             $scope.disp = function () {
+//                 var totvalue = calc($scope.name);
+//                 $scope.val = totvalue;
+//             };
+//             function calc(string) {
+//                 var stringval = 0;
+//                 for (var i = 0; i < string.length; i++) {
+//                     stringval += string.charCodeAt(i);
+//                 }
+//                 return stringval;
+//             };
+
+//             $scope.state='hungry';
+//             $scope.feed= function(){
+//                 $scope.state='full';
+//             };
+//         });
+// })();
 
 
 // (function () {
@@ -51,5 +51,83 @@
 // })();
 
 
+
 // minify
 // !function(){"use strict";function e(e,n){e.name="haha",e.upper=function(){var a=n("uppercase");e.name=a(e.name)}}angular.module("di",[]).controller("dc",e),e.$inject=["$scope","$filter"]}();
+
+
+
+
+
+(function () {
+    "use strict";
+
+    angular.module('di', [])
+        .controller('dc', dicontrol)
+        .filter('rp', rplc);
+
+    dicontrol.$inject = ['$scope', 'rpFilter', '$timeout'];
+    function dicontrol($scope, rpFilter, $timeout) {
+        $scope.name = '';
+
+        $scope.sh = function () {
+            return rpFilter("Hello");
+        };
+
+        $scope.val = 0;
+
+        $scope.disp = function () {
+            var totvalue = calc($scope.name);
+            $scope.val = totvalue;
+        };
+        function calc(string) {
+            var stringval = 0;
+            for (var i = 0; i < string.length; i++) {
+                stringval += string.charCodeAt(i);
+            }
+            return stringval;
+        };
+
+        $scope.state = 'hungry';
+        $scope.feed = function () {
+            $scope.state = 'full';
+        };
+
+        $scope.cnter = 0;
+        $scope.cnt = function () {
+            setTimeout(function () {
+                $scope.cnter++;
+                $scope.$digest();
+            }, 2000);
+        };
+
+        $scope.cnter2 = 0;
+        $scope.cnt2 = function () {
+            setTimeout(function () {
+                $scope.$apply(function () {
+                    $scope.cnter2++;
+                });
+            }, 2000);
+        };
+
+        $scope.cnter3 = 0;
+        $scope.cnt3 = function () {
+            $timeout(function () {
+                $scope.cnter3++;
+            }, 2000);
+        };
+    };
+})();
+
+
+
+
+
+
+function rplc() {
+    return function (input) {
+        input = input || "";
+        input = input.replace('Hello', 'Hi');
+        return input;
+    };
+};

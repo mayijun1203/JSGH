@@ -10,8 +10,48 @@
 </head>
 
 
-<body ng-app='ma'>
-    <h1>My APP</h1>
+
+
+
+<body ng-app='di'>
+    <h1>{{"My APP"|uppercase}}</h1>
+    <div ng-controller='dc'>
+        <div>
+            {{name}} says {{sh()}} and {{'Hello'|rp|uppercase}}
+            <div>
+                <input type="text" ng-model='name' ng-keyup='disp();'>
+                {{val}}
+            </div>
+            <div>
+                <button ng-click='feed()'>feed</button>
+                <br>
+                <img ng-src="/image/{{state}}.jpg" alt="" width="500px" height="500px">
+            </div>
+            <div>
+                <button type='text' ng-click='cnt()'>counter</button>
+                <span>{{cnter}}</span>
+            </div>
+            <div>
+                <button type='text' ng-click='cnt2()'>counter2</button>
+                <span>{{cnter2}}</span>
+            </div>
+            <div>
+                <button type='text' ng-click='cnt3()'>counter3</button>
+                <span>{{cnter3}} {{::cnter3}}</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- <body ng-app='ma'>
+    <h1>{{"My APP"|uppercase}}</h1>
     <div ng-controller='mc'>
         <div>
             {{name}} says {{sh()}}
@@ -28,13 +68,11 @@
 </body>
 
 
-<!-- <body ng-app='di'>
+<body ng-app='di'>
     <h1>DI</h1>
     <div ng-controller='dc'>
         <div>
             <input type="text" ng-model='name' ng-blur='upper();'>
         </div>
     </div>
-</body>
-
-</html> -->
+</body> -->
