@@ -15,7 +15,7 @@
 
 <body ng-app='di'>
     <h1>{{"My APP"|uppercase}}</h1>
-    <div ng-controller='dc'>
+    <div ng-controller='dc as parent'>
         <div>
             {{name}} says {{sh()}} and {{'Hello'|rp|uppercase}}
             <div>
