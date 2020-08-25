@@ -1,0 +1,11 @@
+.container-fluid{
+    background-color: blue;
+    color: burlywood;
+    padding: 0px;
+}
+
+.col-sm{
+    border-width: 2px;
+    border-style:solid;
+    border-color: black; 
+}
