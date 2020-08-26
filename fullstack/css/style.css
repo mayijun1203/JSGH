@@ -1,6 +1,6 @@
 .container-fluid{
     background-color: blue;
-    color: burlywood;
+    color: red;
     padding: 0px;
 }
 
@@ -13,4 +13,10 @@
 .jumbotron{
     background-color: blueviolet;
     text-align:center;
+}
+
+
+
+.breadcrumb{
+    background-color: orange;
 }
