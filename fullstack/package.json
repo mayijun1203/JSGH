@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^5.0.0-alpha1"
+  },
   "devDependencies": {
     "node-sass": "^4.14.1"
   },
