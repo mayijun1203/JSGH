@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "bootstrap": "^5.0.0-alpha1"
-  },
-  "devDependencies": {
-    "node-sass": "^4.14.1"
-  },
   "scripts": {
+    "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass -o css/ css/"
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^5.0.0-alpha1",
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.14.1",
+    "onchange": "^7.0.2",
+    "parallelshell": "^3.0.2"
+  }
 }

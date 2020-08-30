@@ -1,2 +1,7 @@
 npm init
+npm install --save-dev lite-server
 npm install --save-dev node-sass
+npm install --save-dev onchange parallelshell
+
+
+change parallelshell index.js file https://stackoverflow.com/questions/53461626/problem-running-parallelshell-nodejs-script
