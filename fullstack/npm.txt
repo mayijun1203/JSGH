@@ -19,4 +19,21 @@ npm install --save-dev imagemin-cli
 
 npm install --save-dev usemin-cli cssmin uglifyjs htmlmin
 
-npm install --save-dev grunt-cli
+npm -g install grunt-cli
+
+npm install --save-dev grunt
+
+npm install --save-dev grunt-sass time-grunt jit-grunt
+
+npm install --save-dev grunt-contrib-watch
+
+npm install --save-dev grunt-browser-sync
+
+npm install --save-dev grunt-contrib-copy grunt-contrib-clean
+
+npm install --save-dev grunt-contrib-imagemin
+
+npm install --save-dev grunt-contrib-concat grunt-contrib-cssmin grunt-contrib-htmlmin grunt-contrib-uglify grunt-filerev grunt-usemin
+
+
+
