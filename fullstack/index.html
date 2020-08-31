@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/fullstack/node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+
     <title>Full Stack</title>
 </head>
 
@@ -50,19 +56,19 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"></span><a class="btn" href="#">Home</a></li>
+            <li class='btn btn-social-icon btn-google'><i class='fa fa-google fa-lg'></i></li>
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
             <li class="breadcrumb-item active" aria-current="page">Data</li>
         </ol>
     </nav>
-    
+
     <header class="jumbotron">
         <div class="container">
             <div class="row">
                 <div class='col-12'>
                     <div class="media">
-                        <img src="https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png"
-                            alt="dcplogo" class="img-fluid align-self-center">
+                        <img src="/fullstack/img/dcp_logo_772.png" alt="dcplogo" class="img-fluid align-self-center">
                         <div class="media-body">
                             <h1> Hello </h1>
                         </div>
@@ -89,9 +95,6 @@
             </div>
         </div>
     </div>
-    <!-- <iframe width="100%" height="700px" frameborder="0"
-        src="https://nycplanning.carto.com/u/dcptransportation/builder/bf91d388-3c36-4b85-a402-b3631366e8c4/embed"
-        allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe> -->
     <div class="container text-center">
         <ul class="list-group  list-group-flush">
             <li class="list-group-item disabled">a</li>
@@ -284,9 +287,11 @@
         </a>
     </div>
 
-
-    <script src='/fullstack/node_modules/bootstrap/dist/js/bootstrap.min.js'></script>
+    <!-- build:js js/main.js -->
+    <script src='node_modules/bootstrap/dist/js/bootstrap.min.js'></script>
     <script src='js/script.js'></script>
+    <!-- endbuild -->
+
 </body>
 
 </html>

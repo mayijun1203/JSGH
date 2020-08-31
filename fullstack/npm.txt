@@ -1,7 +1,23 @@
 npm init
+
 npm install --save-dev lite-server
+
+npm install --save-dev font-awesome
+
+npm install --save-dev bootstrap-social
+
 npm install --save-dev node-sass
+
 npm install --save-dev onchange parallelshell
-
-
 change parallelshell index.js file https://stackoverflow.com/questions/53461626/problem-running-parallelshell-nodejs-script
+
+npm install --save-dev rimraf
+
+npm install --save-dev copyfiles
+
+npm install --save-dev imagemin-cli
+
+npm install --save-dev usemin-cli cssmin uglifyjs htmlmin
+
+
+usemin is not working for some reason
