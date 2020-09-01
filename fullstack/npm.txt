@@ -9,7 +9,7 @@ npm install --save-dev bootstrap-social
 npm install --save-dev node-sass
 
 npm install --save-dev onchange parallelshell
-change parallelshell index.js file https://stackoverflow.com/questions/53461626/problem-running-parallelshell-nodejs-script
+# change parallelshell index.js file https://stackoverflow.com/questions/53461626/problem-running-parallelshell-nodejs-script
 
 npm install --save-dev rimraf
 
@@ -19,7 +19,7 @@ npm install --save-dev imagemin-cli
 
 npm install --save-dev usemin-cli cssmin uglifyjs htmlmin
 
-npm -g install grunt-cli
+npm install -g grunt-cli
 
 npm install --save-dev grunt
 
@@ -35,5 +35,17 @@ npm install --save-dev grunt-contrib-imagemin
 
 npm install --save-dev grunt-contrib-concat grunt-contrib-cssmin grunt-contrib-htmlmin grunt-contrib-uglify grunt-filerev grunt-usemin
 
+npm install -g gulp-cli
+# manually add to environ path
 
+npm install --save-dev gulp
 
+npm install --save-dev gulp-sass
+
+npm install --save-dev browser-sync
+
+npm install --save-dev del
+
+npm install --save-dev gulp-imagemin
+
+npm install --save-dev gulp-uglify gulp-usemin gulp-rev gulp-clean-css gulp-flatmap gulp-htmlmin
