@@ -29,11 +29,7 @@ module.exports = function (grunt) {
                 bsFiles: {
                     src: [
                         'css/*.css',
-                        'node_modules/bootstrap-social/*.css',
-                        'node_modules/bootstrap/dist/css/*.css',
-                        'node_modules/font-awesome/css/*.css',
                         '*.html',
-                        'node_modules/bootstrap/dist/js/*.js',
                         'js/*.js',
                         'img/*.{png,jpg,gif}',
                     ]

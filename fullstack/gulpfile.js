@@ -28,11 +28,7 @@ gulp.task('browser-sync', function () {
     var files = [
         './*html',
         './css/*.css',
-        './node_modules/bootstrap-social/*.css',
-        './node_modules/bootstrap/dist/css/*.css',
-        './node_modules/font-awesome/css/*.css',
         './js/*.js',
-        './node_modules/bootstrap/dist/js/*.js',
         './img/*.{png,jpg,gif}'
     ];
 
