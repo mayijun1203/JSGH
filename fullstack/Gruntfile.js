@@ -5,8 +5,8 @@ module.exports = function (grunt) {
 
     require('time-grunt')(grunt);
 
-    require('jit-grunt')(grunt,{
-        useminPrepare:'grunt-usemin'
+    require('jit-grunt')(grunt, {
+        useminPrepare: 'grunt-usemin'
     });
 
     grunt.initConfig({
@@ -29,8 +29,13 @@ module.exports = function (grunt) {
                 bsFiles: {
                     src: [
                         'css/*.css',
+                        'node_modules/bootstrap-social/*.css',
+                        'node_modules/bootstrap/dist/css/*.css',
+                        'node_modules/font-awesome/css/*.css',
                         '*.html',
+                        'node_modules/bootstrap/dist/js/*.js',
                         'js/*.js',
+                        'img/*.{png,jpg,gif}',
                     ]
                 },
                 options: {
@@ -102,46 +107,46 @@ module.exports = function (grunt) {
                 }
             }
         },
-        concat:{
-            options:{
-                separator:';'
+        concat: {
+            options: {
+                separator: ';'
             },
-            dist:{}
+            dist: {}
         },
-        uglify:{
-            dist:{}
+        uglify: {
+            dist: {}
         },
-        cssmin:{
-            dist:{}
+        cssmin: {
+            dist: {}
         },
-        filerev:{
-            options:{
-                encoding:'utf8',
-                algorithm:'md5',
-                length:20
+        filerev: {
+            options: {
+                encoding: 'utf8',
+                algorithm: 'md5',
+                length: 20
             },
-            release:{
-                files:[{
-                    src:[
+            release: {
+                files: [{
+                    src: [
                         'dist/js/*.js',
                         'dist/css/*.css'
                     ]
                 }]
             }
         },
-        usemin:{
-            html:['dist/index.html'],
-            options:{
-                assetsDirs:['dist','dist/css','dist/js']
+        usemin: {
+            html: ['dist/index.html'],
+            options: {
+                assetsDirs: ['dist', 'dist/css', 'dist/js']
             }
         },
-        htmlmin:{
-            dist:{
-                options:{
-                    collapseWhiteSpace:true
+        htmlmin: {
+            dist: {
+                options: {
+                    collapseWhiteSpace: true
                 },
-                files:{
-                    'dist/index.html':'dist/index.html'
+                files: {
+                    'dist/index.html': 'dist/index.html'
                 }
             }
         }
